@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support — PPL Ace Private Pilot License Test Prep App">
+    <meta name="theme-color" content="#1e3a5f">
+    <title>Support — PPL Ace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #1e293b;
+            --text-light: #475569;
+            --muted: #64748b;
+            --accent: #2563eb;
+            --accent-light: #dbeafe;
+            --border: #e2e8f0;
+            --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.03);
+            --radius: 14px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0b1120;
+                --card: #162032;
+                --text: #f1f5f9;
+                --text-light: #cbd5e1;
+                --muted: #94a3b8;
+                --accent: #60a5fa;
+                --accent-light: rgba(96,165,250,0.12);
+                --border: #1e3048;
+                --shadow: 0 1px 3px rgba(0,0,0,0.2), 0 1px 2px rgba(0,0,0,0.15);
+                --shadow-md: 0 4px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.1);
+            }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ── Hero ── */
+        .hero {
+            background: linear-gradient(145deg, #0f2942 0%, #1e3a5f 30%, #2563eb 70%, #3b82f6 100%);
+            padding: 4rem 1.5rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(59,130,246,0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 30%, rgba(96,165,250,0.2) 0%, transparent 40%);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M20 20h-2v2h2v-2zm0-20h-2v2h2V0zM0 20h2v-2H0v2z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeUp 0.6s ease-out;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .app-icon {
+            width: 76px;
+            height: 76px;
+            border-radius: 18px;
+            background: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px;
+            margin-bottom: 1.25rem;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.25), 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.35rem;
+            letter-spacing: -0.03em;
+        }
+
+        .hero .subtitle {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.75);
+            font-weight: 400;
+        }
+
+        /* ── Container ── */
+        .container {
+            max-width: 660px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 4rem;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+
+        /* ── Contact Card ── */
+        .contact-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), #8b5cf6);
+        }
+
+        .contact-card .icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-card h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            letter-spacing: -0.02em;
+        }
+
+        .contact-card p {
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card a.email-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--accent);
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 0.7rem 1.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: opacity 0.2s, transform 0.15s;
+        }
+
+        .contact-card a.email-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        /* ── FAQ ── */
+        .faq-section {
+            margin-top: 2.5rem;
+        }
+
+        .faq-section h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .faq-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 0.75rem;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-item h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: var(--text);
+            letter-spacing: -0.01em;
+        }
+
+        .faq-item p {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .faq-item a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .faq-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Divider ── */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            margin: 2.5rem 0;
+        }
+
+        /* ── Links ── */
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .links a:hover { opacity: 0.75; }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 2.5rem 1.5rem 3rem;
+            font-size: 0.78rem;
+            color: var(--muted);
+        }
+
+        @media (max-width: 480px) {
+            .hero { padding: 3rem 1.25rem 2.25rem; }
+            .hero h1 { font-size: 1.6rem; }
+            .container { padding: 2rem 1.25rem 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="hero-content">
+        <div class="app-icon">✈️</div>
+        <h1>Support</h1>
+        <p class="subtitle">PPL Ace — Private Pilot Test Prep</p>
+    </div>
+</div>
+
+<div class="container">
+
+    <p class="intro">Need help with PPL Ace? We&rsquo;re here for you.<br>Check the common questions below or reach out directly.</p>
+
+    <!-- Contact -->
+    <div class="contact-card">
+        <div class="icon">&#9993;&#65039;</div>
+        <h2>Email Us</h2>
+        <p>For questions, feedback, or issues &mdash; we typically respond within 24 hours.</p>
+        <a href="mailto:support@pplace.app" class="email-btn">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            support@pplace.app
+        </a>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+        <h2>Common Questions</h2>
+
+        <div class="faq-item">
+            <h3>How do I restore my purchase on a new device?</h3>
+            <p>Go to <strong>Settings &rarr; Restore Purchases</strong> in the app. Make sure you&rsquo;re signed in with the same Apple ID used for the original purchase. Your premium access will be restored automatically.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I cancel my subscription?</h3>
+            <p>Open your iPhone&rsquo;s <strong>Settings &rarr; Apple ID &rarr; Subscriptions</strong>, find PPL Ace, and tap <strong>Cancel Subscription</strong>. You&rsquo;ll retain access until the end of your billing period.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can I switch from monthly to lifetime?</h3>
+            <p>Yes! Cancel your monthly subscription first, then purchase the lifetime option from the upgrade screen. The lifetime purchase is a one-time payment with no recurring charges.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How many questions are in the question bank?</h3>
+            <p>PPL Ace covers all major FAA Private Pilot knowledge areas. The question count is shown in <strong>Settings &rarr; Question Bank</strong>. We regularly update and expand the question bank.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Will my progress be saved if I delete the app?</h3>
+            <p>All study data is stored locally on your device. If you delete the app, your progress will be permanently removed. We recommend completing your study goals before removing the app.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Is PPL Ace a replacement for ground school?</h3>
+            <p>No. PPL Ace is a supplemental study tool designed to help you practice for the FAA written knowledge test. It should be used alongside official FAA training materials and instructor-led ground school.</p>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (EULA)</a>
+    </div>
+
+</div>
+
+<div class="footer">
+    &copy; 2026 PPL Ace. All rights reserved.
+</div>
+
+</body>
+</html>
